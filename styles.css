@@ -1,12 +1,16 @@
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --dark-color: #2c3e50;
-    --light-color: #ecf0f1;
-    --danger-color: #e74c3c;
-    --warning-color: #f39c12;
-    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --primary-color: #5e72e4;
+    --secondary-color: #2dce89;
+    --dark-color: #32325d;
+    --light-color: #f7fafc;
+    --danger-color: #f5365c;
+    --warning-color: #fb6340;
+    --box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
     --transition: all 0.3s ease;
+    --gradient-primary: linear-gradient(87deg, #5e72e4 0, #825ee4 100%);
+    --gradient-secondary: linear-gradient(87deg, #2dce89 0, #2dcca7 100%);
+    --gradient-danger: linear-gradient(87deg, #f5365c 0, #f56036 100%);
+    --gradient-warning: linear-gradient(87deg, #fb6340 0, #fbb140 100%);
 }
 
 * {
@@ -18,8 +22,9 @@
 body {
     font-family: 'Roboto', 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #525f7f;
     background-color: #f8f9fa;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
 }
 
 .container {
@@ -29,10 +34,25 @@ body {
 }
 
 header {
-    background-color: var(--primary-color);
+    background-image: var(--gradient-primary);
     color: white;
-    padding: 2rem 0;
+    padding: 3rem 0;
     box-shadow: var(--box-shadow);
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(30deg);
 }
 
 header h1 {
@@ -79,18 +99,30 @@ p {
 
 .card {
     background-color: white;
-    border-radius: 10px;
-    padding: 2rem;
+    border-radius: 15px;
+    padding: 2.5rem;
     box-shadow: var(--box-shadow);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     position: relative;
     overflow: hidden;
     transition: var(--transition);
+    border-top: 3px solid transparent;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 0 0 0 100%;
 }
 
 .illustration {
@@ -105,19 +137,23 @@ p {
 }
 
 #pain .card {
-    border-left: 5px solid var(--danger-color);
+    border-top-color: var(--danger-color);
+    background-image: linear-gradient(to bottom right, white, white, rgba(245, 54, 92, 0.05));
 }
 
 #more-pain .card {
-    border-left: 5px solid var(--danger-color);
+    border-top-color: var(--danger-color);
+    background-image: linear-gradient(to bottom right, white, white, rgba(245, 54, 92, 0.08));
 }
 
 #hope .card {
-    border-left: 5px solid var(--warning-color);
+    border-top-color: var(--warning-color);
+    background-image: linear-gradient(to bottom right, white, white, rgba(251, 99, 64, 0.05));
 }
 
 #solution .card {
-    border-left: 5px solid var(--secondary-color);
+    border-top-color: var(--secondary-color);
+    background-image: linear-gradient(to bottom right, white, white, rgba(45, 206, 137, 0.05));
 }
 
 .solution-steps {
@@ -129,59 +165,125 @@ p {
 
 .step {
     background-color: white;
-    border-radius: 10px;
-    padding: 1.5rem;
+    border-radius: 15px;
+    padding: 2rem;
     box-shadow: var(--box-shadow);
     position: relative;
     transition: var(--transition);
+    border-bottom: 3px solid var(--secondary-color);
+    z-index: 1;
+    overflow: hidden;
 }
 
 .step:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(45, 206, 137, 0.05);
+    z-index: -1;
+    transition: height 0.3s ease;
+}
+
+.step:hover::after {
+    height: 100%;
 }
 
 .step-number {
     position: absolute;
-    top: -15px;
-    left: -15px;
-    width: 40px;
-    height: 40px;
-    background-color: var(--secondary-color);
+    top: -20px;
+    left: -20px;
+    width: 50px;
+    height: 50px;
+    background-image: var(--gradient-secondary);
     color: white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    box-shadow: 0 5px 15px rgba(45, 206, 137, 0.4);
 }
 
 #cta {
     text-align: center;
-    padding: 3rem 0;
-    background-color: var(--light-color);
-    border-radius: 10px;
-    margin-top: 3rem;
+    padding: 4rem 0;
+    background-image: var(--gradient-primary);
+    border-radius: 15px;
+    margin-top: 4rem;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+#cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(30deg);
+}
+
+#cta h2 {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+#cta h2::after {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 150px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #start-button {
-    background-color: var(--secondary-color);
+    background-image: var(--gradient-secondary);
     color: white;
     border: none;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
     border-radius: 50px;
     cursor: pointer;
     transition: var(--transition);
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 7px 14px rgba(45, 206, 137, 0.4);
     margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#start-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s ease;
+    z-index: -1;
 }
 
 #start-button:hover {
-    background-color: #27ae60;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(45, 206, 137, 0.5);
+}
+
+#start-button:hover::before {
+    width: 100%;
 }
 
 #start-button:active {
@@ -191,8 +293,22 @@ p {
 footer {
     background-color: var(--dark-color);
     color: white;
-    padding: 2rem 0;
+    padding: 3rem 0;
     text-align: center;
+    margin-top: 5rem;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background-image: var(--gradient-primary);
 }
 
 /* Modal */
@@ -211,36 +327,62 @@ footer {
 .modal-content {
     background-color: white;
     margin: 15% auto;
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 3rem;
+    border-radius: 15px;
     width: 80%;
     max-width: 600px;
-    box-shadow: var(--box-shadow);
-    animation: modalOpen 0.5s;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: modalOpen 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-image: var(--gradient-secondary);
+}
+
+.modal-content h2 {
+    margin-top: 1rem;
 }
 
 @keyframes modalOpen {
     from {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-70px) scale(0.9);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
 .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: var(--dark-color);
+    background-color: rgba(0, 0, 0, 0.05);
     text-decoration: none;
 }
 
@@ -266,11 +408,162 @@ footer {
 
 #intro {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+#intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-image: var(--gradient-primary);
+}
+
+#intro h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
 }
 
 #intro p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     max-width: 800px;
     margin: 0 auto;
+    color: #525f7f;
+}
+
+/* Add animations for sections */
+section, header, .card, .step {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.show, header.show, .card.show, .step.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add staggered animation for steps */
+.step {
+    transition-delay: calc(var(--i, 0) * 0.1s);
+}
+
+/* Add a subtle hover effect to all headings */
+h2:hover::after, h3:hover {
+    color: var(--primary-color);
+}
+
+/* Enhance the icons */
+.icon {
+    font-size: 5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+/* Success animation in modal */
+.success-animation {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.success-icon {
+    font-size: 5rem;
+    color: var(--secondary-color);
+    animation: successPulse 2s infinite;
+}
+
+@keyframes successPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Icon styling */
+i {
+    margin-right: 0.5rem;
+}
+
+h2 i {
+    color: var(--primary-color);
+}
+
+#pain h2 i, #more-pain h2 i {
+    color: var(--danger-color);
+}
+
+#hope h2 i {
+    color: var(--warning-color);
+}
+
+#solution h2 i, .step h4 i {
+    color: var(--secondary-color);
+}
+
+#cta h2 i {
+    color: white;
+}
+
+.step h4 i {
+    font-size: 1.1rem;
+}
+
+/* Button click animation */
+#start-button.clicked {
+    transform: scale(0.95);
+    box-shadow: 0 5px 10px rgba(45, 206, 137, 0.3);
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.6s ease;
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+}
+
+.card:hover {
+    background-position: 100% 100%;
+}
+
+/* Add subtle animation to header */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+#cta {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
 }
